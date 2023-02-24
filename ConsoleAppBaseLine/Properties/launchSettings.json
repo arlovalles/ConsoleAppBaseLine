@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ConsoleAppBaseLine": {
+      "commandName": "Project",
+      "commandLineArgs": "-m xmlout -o xmlfile.xml -i file1.txt file2.txt"
+    }
+  }
+}
