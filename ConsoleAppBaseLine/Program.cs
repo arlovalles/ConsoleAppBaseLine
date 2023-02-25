@@ -72,7 +72,7 @@ void RunOptions(UserCommandLineOptions opts)
     }
     catch(Exception e)
     {
-        _logger.Error(e.ToString());
+        _logger.Fatal(e.ToString());
     }
 
 
@@ -82,7 +82,7 @@ void HandleParseError(IEnumerable<Error> errs)
 {
     foreach(var error in errs)
     {
-        _logger.Error($"{error}");
+        _logger.Fatal($"{error}");
 
     }
 }

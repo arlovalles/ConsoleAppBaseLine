@@ -20,9 +20,7 @@ namespace ConsoleAppBaseLine
             //evaluate Config and Options and Run Accordingly
             try
             {
-                _log.Debug("Executing...");
-                _log.Trace($"Run Mode: {opts.RunMode}");
-                _log.Trace($"Output File: {opts.OutputFile}");
+                _log.Trace($"Executing in MyService. Run Mode = {opts.RunMode} Output File: {opts.OutputFile}");                
 
                 foreach (var inFile in opts.InputFiles)
                 {
@@ -33,9 +31,9 @@ namespace ConsoleAppBaseLine
                 _myDataService.DoSomethingElse(opts.OutputFile);
 
 
-                _log.Warn("Warn -> **WARNING**");
-                _log.Error("Error -> **ERROR**");
-                _log.Fatal("Fatal -> **FATALITY**");
+                _log.Warn("Sample Warning : Emphasis Words -> WARNING");
+                _log.Error("Sample Error : Emphasis Words -> ERROR");
+                _log.Fatal("Sample Fatal : Emphasis Words -> FATAL, FATALITY");
 
 
             }

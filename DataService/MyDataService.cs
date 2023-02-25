@@ -10,12 +10,12 @@ namespace DataService
 
         public void DoSomething(bool AnArg)
         {
-            _log.Debug(AnArg);
+            _log.Debug($"Logging {AnArg} in DoSomething()");
         }
 
         public void DoSomethingElse(string ADifferentArg)
         {
-            _log.Debug(ADifferentArg);
+            _log.Debug($"Logging {ADifferentArg} in DoSomethingElse()");
         }
     }
 }
