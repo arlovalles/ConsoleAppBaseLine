@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleAppBaseLine.Configuration
+namespace EFData.model
 {
-    internal class RuntimeExecutionOptions
+    internal class MyType
     {
     }
 }

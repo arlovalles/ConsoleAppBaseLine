@@ -4,14 +4,15 @@ using ConsoleAppBaseLine;
 using ConsoleAppBaseLine.Configuration;
 using DataService;
 using DataService.interfaces;
+using EFData;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using NLog;
 using NLog.Extensions.Logging;
-using System.Reflection;
-using System.Runtime.CompilerServices;
 
-ILogger _logger;
+NLog.ILogger _logger;
 string currentDir = Directory.GetCurrentDirectory();
 
 var config = new ConfigurationBuilder()
@@ -54,13 +55,14 @@ IServiceCollection ConfigureServices(IConfigurationRoot config)
     services.AddTransient<IMyDataService, MyDataService>();
 
     //Add EF context
-    /*
-      services.AddDbContext<MMContext>(options =>
+    
+      services.AddDbContext<MyDataContext>(options =>
       {
+          options.UseLoggerFactory((ILoggerFactory)LogManager.LogFactory);
           options.UseSqlServer(config.GetSection("DataAccess").GetConnectionString(activeConnectionId));
           options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
       });
-    */
+    
     return services;
 }
 
