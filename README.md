@@ -1,0 +1,1 @@
+This is a project template for a C# console app. I use this template as a starting point for command line utilities. The project template starts with logging already setup and configured in the project. Also has basic starting code for Entity framework.  
